@@ -1,18 +1,11 @@
-import Profile from "./Profile"; // Импортируем компонент Profile
+import Profile from "./Profile"; 
 import "./App.css";
-
-const userData = {
-  username: "Jacques Gluke",
-  tag: "jgluke",
-  location: "Ocho Rios, Jamaica",
-  avatar: "https://cdn-icons-png.flaticon.com/512/2922/2922506.png",
-  stats: {
-    followers: 5603,
-    views: 4827,
-    likes: 1308,
-  },
-};
-
+import userData from "../userData.json";
+import friends from "../friends.json";
+import FriendList from "./FriendList";
+import transactions from "../transactions.json";
+import TransactionHistory
+  from "./TransactionHistory";
 const App = () => {
   return (
     <>
@@ -23,6 +16,8 @@ const App = () => {
         image={userData.avatar}
         stats={userData.stats}
       />
+      <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
     </>
   );
 };
