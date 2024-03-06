@@ -1,0 +1,12 @@
+.cardUser {
+    width: 500px;
+    height: 600px;
+    background-color: rgb(209, 206, 206);
+    margin-bottom: 20px;
+   }
+.userData {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
