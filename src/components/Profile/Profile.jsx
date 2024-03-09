@@ -10,21 +10,22 @@ const Profile = ({ name, tag, location, image, stats }) => {
         <p className={css.tag}>@{tag}</p>
         <p className={css.location}>{location}</p>
       </div>
-      <ul className={css.statsTable}>
-        <li>
+      <ul className={css.stats}>
+        <li className={css.statsLi}>
           <span className={css.title}>Followers</span>
-          <span>{followers}</span>
+          <span className={css.value}>{followers}</span>
         </li>
-        <li>
-          <span>Views</span>
-          <span>{views}</span>
+        <li className={css.statsLi}>
+          <span className={css.title}>Views</span>
+          <span className={css.value}>{views}</span>
         </li>
-        <li>
-          <span>Likes</span>
-          <span>{likes}</span>
+        <li className={css.statsLi}>
+          <span className={css.title}>Likes</span>
+          <span className={css.value}>{likes}</span>
         </li>
       </ul>
     </div>
   );
 };
+
 export default Profile;
